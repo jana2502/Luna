@@ -1,0 +1,23 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.neon-glow {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+}
+
+.chat-bubble {
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    max-width: 80%;
+}
+
+.chat-bubble.user {
+    background: linear-gradient(145deg, #00ffcc, #00b894);
+    align-self: flex-end;
+}
