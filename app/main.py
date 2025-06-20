@@ -54,7 +54,7 @@ def sign_in(user: schemas.UserSignIn, db: Session = Depends(get_db)):
     email_utils.send_email(
         to_email=db_user.email,
         subject="Sign-In Notification",
-        body=f"Dear {db_user.user_name},\n\nYou have successfully signed in to your account at {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} UTC.\n\nIf this was not you, please secure your account immediately.\n\nBest regards,\nLuna Team"
+        body=f"Dear {db_user.user_name},\n\nYou have successfully signed in to Luna Chatbot at {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')} UTC.\n\nIf this was not you, please secure your account immediately.\n\nBest regards,\nLuna Team"
     )
     return {"message": "Sign in successful"}
 

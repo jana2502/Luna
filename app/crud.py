@@ -41,6 +41,8 @@ def update_profile(db: Session, user_name: str, profile_data: schemas.UpdateProf
         user.age = profile_data.age
     if profile_data.designation is not None:
         user.designation = profile_data.designation
+    if profile_data.email:
+        user.email=profile_data.email
     db.commit()
     db.refresh(user)
     return user

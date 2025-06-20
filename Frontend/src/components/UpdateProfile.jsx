@@ -8,6 +8,7 @@ const UpdateProfile = ({ user, setUser, setError, setSuccess }) => {
         name: '',
         age: '',
         designation: '',
+        email: '',
     });
 
     const handleInputChange = (e) => {
@@ -52,6 +53,7 @@ const UpdateProfile = ({ user, setUser, setError, setSuccess }) => {
                     name: formData.name || null,
                     age: formData.age ? parseInt(formData.age) : null,
                     designation: formData.designation || null,
+                    email: formData.email,
                 }),
             });
             const data = await response.json();
@@ -127,6 +129,14 @@ const UpdateProfile = ({ user, setUser, setError, setSuccess }) => {
                     value={formData.designation}
                     onChange={handleInputChange}
                     placeholder="Designation (optional)"
+                    className="w-full p-2 bg-gray-800 rounded text-white"
+                />
+                <input
+                    type="text"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Email"
                     className="w-full p-2 bg-gray-800 rounded text-white"
                 />
                 <motion.button
